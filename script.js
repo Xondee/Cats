@@ -11,7 +11,7 @@ function getRandomCat() {
 }
 function getRandomCat2() {
     // Using the Cat API to get random cat images
-    fetch('https://waifu.pics/')
+    fetch('https://nekos.life/')
         .then(response => response.json())
         .then(data => {
             const catImageElement = document.getElementById('catImage');
