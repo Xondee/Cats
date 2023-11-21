@@ -9,3 +9,14 @@ function getRandomCat() {
         })
         .catch(error => console.error('Error fetching cat image:', error));
 }
+function getRandomCat2() {
+    // Using the Cat API to get random cat images
+    fetch('https://waifu.pics/')
+        .then(response => response.json())
+        .then(data => {
+            const catImageElement = document.getElementById('catImage');
+            catImageElement.src = data[0].url;
+            catImageElement.alt = 'Random Cat Image';
+        })
+        .catch(error => console.error('Error fetching cat image:', error));
+}
